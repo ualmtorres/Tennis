@@ -1,0 +1,18 @@
+version: '2'
+services:
+  tennis_api:
+    container_name: tennis_api 
+    restart: always
+    image: ualmtorres/phalcon-apache-ubuntu
+    ports:
+      - "80:80"
+    volumes:
+      - ./api:/var/www/html 
+  tennis_app:
+    container_name: tennis_app 
+    restart: always
+    image: ualmtorres/phalcon-apache-ubuntu
+    ports:
+      - "81:80"
+    volumes:
+      - ./app:/var/www/html 

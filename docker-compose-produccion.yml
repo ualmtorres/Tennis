@@ -1,0 +1,14 @@
+version: '2'
+services:
+  tennis_api:
+    container_name: tennis_api 
+    restart: always
+    image: ualmtorres/tennis-api:v0
+    ports:
+      - "82:80"
+  tennis_app:
+    container_name: tennis_app 
+    restart: always
+    image: ualmtorres/tennis-app:v0
+    ports:
+      - "83:80"
